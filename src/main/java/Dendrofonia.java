@@ -1,6 +1,8 @@
+import models.Tree;
 import processing.core.PApplet;
 
 public class Dendrofonia extends PApplet {
+    Tree tree;
     @Override
     public void settings() {
         size(800, 800, P3D);
@@ -8,6 +10,8 @@ public class Dendrofonia extends PApplet {
 
     @Override
     public void setup() {
+        this.tree = new Tree(this);
+        System.out.println(tree);
     }
 
     @Override
@@ -16,5 +20,6 @@ public class Dendrofonia extends PApplet {
 
     public static void main(String[] args) {
         PApplet.main(new String[] {Dendrofonia.class.getName()});
+
     }
 }
