@@ -12,7 +12,6 @@ public class Tree {
     Util util;
     int lastGrownBranch = 0;
 
-
     private int totalSegments = 0;
 
     public Tree(PApplet pApplet) {
@@ -44,7 +43,8 @@ public class Tree {
 
         if(nextGrowingBranch == -1) {
             // tree empty
-            branches.add(new Branch()); // fixme add parameters
+            branches.add(new Branch(0)); // fixme add parameters
+            branches.get(0).grow(sound);
             lastGrownBranch = 0;
         } else {
             branches.get(nextGrowingBranch).grow(sound);

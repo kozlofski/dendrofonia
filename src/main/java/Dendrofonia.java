@@ -11,7 +11,7 @@ public class Dendrofonia extends PApplet {
     @Override
     public void setup() {
         this.tree = new Tree(this);
-        tree.grow(1);
+        tree.grow(2);
         System.out.println(tree);
     }
 

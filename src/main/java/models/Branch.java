@@ -6,9 +6,11 @@ public class Branch {
     ArrayList<Segment> segments;
     private boolean reachedMaxLength = false;
     private int generation;
+    private int branchNumber;
 
-    public Branch() {
+    public Branch(int branchNumber) {
         segments = new ArrayList<Segment>();
+        this.branchNumber = branchNumber;
     }
 
     public boolean isGrowable() {
@@ -41,10 +43,7 @@ public class Branch {
         }
 
 
-        return " -b- " +
-                "segments=" + segmentsString.toString() +
-                ", reachedMaxLength=" + reachedMaxLength +
-                ", generation=" + generation +
-                '}';
+        return "\n -b- Branch no " + branchNumber +
+                " with segments:\n" + segmentsString.toString();
     }
 }

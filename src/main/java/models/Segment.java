@@ -11,7 +11,7 @@ public class Segment {
 
     @Override
     public String toString() {
-        return " --s- " +
+        return "  -s- " +
                 "sound=" + sound +
                 ", branchNumber=" + branchNumber +
                 ", hasChildren=" + hasChildren +
