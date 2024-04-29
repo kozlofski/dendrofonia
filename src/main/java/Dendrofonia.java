@@ -1,8 +1,9 @@
 import processing.core.PApplet;
 
-public class Test extends PApplet {
+public class Dendrofonia extends PApplet {
     @Override
     public void settings() {
+        size(800, 800, P3D);
     }
 
     @Override
@@ -14,6 +15,6 @@ public class Test extends PApplet {
     }
 
     public static void main(String[] args) {
-        PApplet.main(new String[] {Test.class.getName()});
+        PApplet.main(new String[] {Dendrofonia.class.getName()});
     }
 }
