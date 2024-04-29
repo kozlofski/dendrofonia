@@ -21,6 +21,10 @@ public class Tree {
         util = new Util(pApplet);
     }
 
+    public void grow() {
+        this.grow(null);
+    }
+
     public void grow(int segmentsToGrow) {
         // this version is for testing purposes
         for (int i = 0; i < segmentsToGrow; i++) {
@@ -28,18 +32,13 @@ public class Tree {
         }
     }
 
-    public void grow() {
-        this.grow(null);
-    }
-
-    // it should have own iterator - instead of squirrels
     public void grow(Sound sound) {
         if (totalSegments >= MAX_SEGMENTS) return;
         // fixme "segments full exception"
 
         int nextGrowingBranch = findGrowable();
         if(nextGrowingBranch == -2) return;
-        // fixme "branches full exception"
+        // fixme "branches full exception, no new branches in the future"
 
         if(nextGrowingBranch == -1) {
             // tree empty
@@ -74,6 +73,10 @@ public class Tree {
 
         System.out.println(" -f- all branches full");
         return -2; // all branches full
+    }
+
+    public void draw() {
+        // fixme fill with beautiful stuff
     }
 
     @Override

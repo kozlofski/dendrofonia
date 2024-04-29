@@ -33,6 +33,8 @@ public class Branch {
         }
     }
 
+
+
     @Override
     public String toString() {
         StringBuilder segmentsString = new StringBuilder();

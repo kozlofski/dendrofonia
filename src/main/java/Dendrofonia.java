@@ -6,6 +6,7 @@ public class Dendrofonia extends PApplet {
     @Override
     public void settings() {
         size(800, 800, P3D);
+//        frameRate(1.0f); //fixme why frameRate not workin'
     }
 
     @Override
@@ -17,10 +18,10 @@ public class Dendrofonia extends PApplet {
 
     @Override
     public void draw() {
+        tree.draw();
     }
 
     public static void main(String[] args) {
         PApplet.main(new String[] {Dendrofonia.class.getName()});
-
     }
 }
